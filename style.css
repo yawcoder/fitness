@@ -1,13 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #4B4B4B;
     height: 100vh;
 }
 
-.container{
-    width: 50%;
-    background-color: red;
-    height: 50%;
-    filter: blur(300px);
+.container-fluid{
+    height: 100%;
+}
+
+.container-fluid .row{
+    height: 100%;
+}
+
+/* .container-fluid .row .col-md-8{
+    width: 67%;
+} */
+
+/* header of left column */
+.container-fluid .row .col-md-8 header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* logo container */
+.container-fluid .row .col-md-8 header .logo-container{
+    position: relative;
+    width: 200px;
+}
+
+/* logo */
+.container-fluid .row .col-md-8 header .logo-container img{
+    width: 100%;
+}
+
+/* text under logo */
+.container-fluid .row .col-md-8 header .logo-container div{
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    font-family: 'poppins', sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* links container */
+.container-fluid .row .col-md-8 header .links-container{
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center; */
+    padding: 4em 0;
+    text-decoration: none;
+    width: 70%;
+}
+
+/* links */
+.container-fluid .row .col-md-8 .links-container a{
+    padding: 0 1.5em;
+    font-size: 15px;
+    font-family: 'poppins', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.container-fluid .row .col-md-8 .links-container a:hover{
+    text-decoration: underline;
+}
+
+.container-fluid .row .col-md-4{
+    background-color: #1CAFA6;
 }
