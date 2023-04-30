@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&family=Mulish&family=Nunito&family=Poppins&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'mukta', sans-serif;
 }
 
 body{
@@ -72,6 +75,81 @@ body{
 
 .container-fluid .row .col-md-8 .links-container a:hover{
     text-decoration: underline;
+}
+
+/* hero */
+.container-fluid .row .col-md-8 .hero{
+    width: 60%;
+    padding: 3em 0;
+}
+
+.container-fluid .row .col-md-8 .hero p{
+    font-size: 3.5em;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'nunito', sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* content */
+.container-fluid .row .col-md-8 .content{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-family: 'mulish', sans-serif;
+}
+
+.container-fluid .row .col-md-8 .content p{
+    font-size: 1.3em;
+}
+
+.container-fluid .row .col-md-8 .stats{
+    margin: auto;
+    padding: 2em 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.container-fluid .row .col-md-8 .stats .coaches span{
+    font-size: 2em;
+    color: #00FFF0;
+    font-weight: bold;
+    width: 100%;
+}
+
+.container-fluid .row .col-md-8 .stats .coaches p{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.container-fluid .row .col-md-8 .stats .members span{
+    font-size: 2em;
+    color: #00FFF0;
+    font-weight: bold;
+    width: 100%;
+}
+
+.container-fluid .row .col-md-8 .stats .members p{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.container-fluid .row .col-md-8 .stats .start button{
+    padding: 15px 27px;
+    text-transform: capitalize;
+    font-size: 1.5em;
+    border-bottom-right-radius: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: #00b0a4;
+    color: #fff;
 }
 
 .container-fluid .row .col-md-4{
