@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Page</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body>
+    <div class="container-fluid" id="container">
+        <header>
+            <div class="logo-container">
+                <img src="../images/logo.svg">
+                <div>FITNESS CLUB</div>
+            </div>
+            <div class="links-container">
+                <a href="#">Home</a>
+                <a href="#">Train</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </header>
+
+
+        <div class="heading-container">
+            <h2>What Would You Like To Train Today</h2>
+        </div>
+        <div class="search-container">
+            <label for="body-part">Body Part:</label>
+            <select id="body-part"></select>
+            <button id="train-btn">Train</button>
+        </div>
+
+        <div class="results-container">
+            <div id="pagination" class="page-numbers"></div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

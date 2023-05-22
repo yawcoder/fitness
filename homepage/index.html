@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Club</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="https://kit.fontawesome.com/00f365168b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container mx-auto">
+        <!-- header -->
+        <header class="h-40 w-full py-8 px-16 md:flex md:items-center md:justify-between">
+            <div id="logo-container" class="flex justify-between items-center">
+                <span class="cursor-pointer">
+                    <img class="inline" src="../images/logo.png" width="50">
+                    NoGymFit
+                </span>
+                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                    <i class="fa-solid fa-bars" onclick="menu(this)"></i>
+                </span>
+            </div>
+            <ul id="links-container" class="md:flex md:items-center md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top[-400px] transition-all ease-in">
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#">Home</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="../workout-page/workout-page.html">Train</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="#">Contact</a>
+                </li>
+                <a class="text-base bg-orange-50 hover:bg-orange-200 border-solid border-2 rounded-lg border-orange-600 px-7 py-2 capitalize font-poppins text-orange-600 font-black" href="#">join now</a>
+            </ul>
+        </header>
+        <div>
+            kdnefjebfebf
+        </div>
+        <!-- hero -->
+        
+    </div>
+    <div class="blur"></div>
+
+    <!-- JavaScript -->
+    <script>
+        function menu(e){
+            const links = document.querySelector('ul');
+            const header = document.querySelector('header');
+
+            if(e.classList.contains('fa-bars')){
+                e.classList.remove('fa-bars');
+                e.classList.add('fa-xmark');
+                links.classList.add('top-[80px]');
+                links.classList.add('opacity-100');
+                header.classList.remove('h-40');
+                header.classList.add('h-80');
+            }else{
+                e.classList.remove('fa-xmark');
+                e.classList.add('fa-bars');
+                links.classList.remove('top-[80px]')
+                links.classList.remove('opacity-100')
+                header.classList.add('h-40');
+                header.classList.remove('h-80');
+            }
+        }
+    </script>
+</body>
+</html>
