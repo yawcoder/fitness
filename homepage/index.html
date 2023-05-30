@@ -22,13 +22,13 @@
                 </span>
             </div>
             <ul id="links-container" class="md:flex md:items-center md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top[-400px] transition-all ease-in text-center md:text-left font-black text-[1.2em]">
-                <li class="mx-4 my-6 md:my-0 hover:text-orange-600 px-4">
+                <li class="mx-4 my-6 md:my-0 hover:text-orange-600 px-4 opacity-70">
                     <a href="#">Home</a>
                 </li>
-                <li class="mx-4 my-6 md:my-0 hover:text-orange-600 px-4">
+                <li class="mx-4 my-6 md:my-0 hover:text-orange-600 px-4 opacity-70">
                     <a href="../workout-page/workout-page.html">Train</a>
                 </li>
-                <li class="mx-4 my-6 md:my-0 hover:text-orange-600 px-4">
+                <li class="mx-4 my-6 md:my-0 hover:text-orange-600 px-4 opacity-70">
                     <a href="#">Contact</a>
                 </li>
                 <a class="text-base bg-orange-50 hover:bg-orange-300 border-solid border-2 rounded-lg border-orange-600 px-7 py-2 capitalize font-poppins text-orange-700 font-black duration-500" href="#">join now</a>
@@ -48,7 +48,7 @@
                         <a href="#" class="bg-orange-600 text-white py-4 px-9 capitalize rounded-lg font-extrabold hover:bg-orange-700 duration-300 md:mx-14">
                             get started
                         </a>
-                        <a href="#" class="flex items-center md:mx-14">
+                        <a href="#" class="flex items-center md:mx-14 hover:scale-110 duration-300">
                             <i class="fa-solid fa-circle-play text-4xl md:text-5xl mr-2"></i>
                             <span class="font-extrabold md:text-[1.3rem]">Watch Video</span>
                         </a>
@@ -121,10 +121,56 @@
         </div>
     </div>
 
-    <div id="review" class="container">
+    <div id="review" class="container mx-auto">
         <h2 class="capitalize text-center font-black text-4xl my-14">what people say about us</h2>
-        <div id="profilepic-container" class="w-1/2 mx-auto">
+        <div id="profilepic-container" class="w-2/5 md:w-1/6 mx-auto">
             <img src="../images/myself.jpeg" class="w-full rounded-full">
+        </div>
+        <p id="about-me" class="w-2/3 md:w-1/3 mx-auto text-center my-14 font-poppins opacity-70">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum eligendi atque tempora officia facilis esse distinctio error rem aperiam consequatur?
+        </p>
+        <h3 class="font-black text-center text-2xl">Isaac Boamah Anim</h3>
+        <p class="text-center">Front End Developer</p>
+    </div>
+
+    <div id="email-list" class="container mx-auto my-20">
+        <div class="w-4/5 md:w-4/6 mx-auto py-20 bg-[#258675] rounded-2xl">
+            <p class="capitalize text-center text-white text-2xl font-black">subscribe to our daily tips</p>
+            <p class=" my-6 text-center text-white">Get helpful tips to help you get in shape and stay in shape for life</p>
+            <div id="email-input-container" class="w-full text-center">
+                <input type="email" placeholder="Type Your Email Address Here" class="w-5/6 h-14 rounded-xl text-center outline-none md:w-1/2">
+                <a href="#" class="capitalize text-white font-black block mt-10 bg-[#f67b52] py-4 md:px-7 md:ml-3 rounded-xl w-2/5 mx-auto hover:bg-[#c46241] duration-300 md:inline">subscribe</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="container mx-auto mb-20 md:flex md:justify-between lg:px-32">
+        <div class="w-3/5 mx-auto text-center md:w-1/3">
+            <p class="font-inknut font-black my-3">NoGymFit</p>
+            <div id="icon-container" class="flex justify-center gap-5 text-2xl">
+                <i class="fa-brands fa-facebook-f py-3 px-4 text-white bg-[#f67b52] rounded-full cursor-pointer"></i>
+                <i class="fa-brands fa-twitter py-3 px-3 text-white bg-[#f67b52] rounded-full cursor-pointer"></i>
+                <i class="fa-brands fa-instagram py-3 px-3 text-white bg-[#f67b52] rounded-full cursor-pointer"></i>
+            </div>
+        </div>
+        <div class="flex w-full justify-center gap-20 my-16 md:my-0 md:-1/3">
+            <div>
+                <h5 class="font-bold my-3 font-inknut">Classes</h5>
+                <a href="#" class="opacity-70 block hover:opacity-100">body building</a>
+                <a href="#" class="opacity-70 block hover:opacity-100">weight loss</a>
+                <a href="#" class="opacity-70 block hover:opacity-100">heavy weight</a>
+            </div>
+            <div>
+                <h5 class="font-bold my-3 font-inknut">Useful Links</h5>
+                <a href="#" class="opacity-70 block hover:opacity-100">About</a>
+                <a href="#" class="opacity-70 block hover:opacity-100">Services</a>
+                <a href="#" class="opacity-70 block hover:opacity-100">Team</a>
+            </div>
+        </div>
+        <div class="text-center md:w-1/3">
+            <h5 class="capitalize font-inknut font-black my-3">location and contact</h5>
+            <p class="opacity-70">Accra, Ghana</p>
+            <p class="opacity-70">+233 50 312 5898</p>
         </div>
     </div>
         
