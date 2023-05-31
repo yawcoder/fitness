@@ -5,21 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Page</title>
+    <script src="https://kit.fontawesome.com/00f365168b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../dist/output.css">
 </head>
 <body>
-    <div class="container-fluid" id="container">
-        <header>
-            <div class="logo-container">
-                <img src="../images/logo.svg">
-                <div>FITNESS CLUB</div>
+    <div class="container mx-auto">
+        <header class="h-40 w-full py-8 px-7 md:flex md:items-center md:justify-between">
+            <div id="logo-container" class="flex justify-between items-center">
+                <span class="cursor-pointer font-inknut font-black text-2xl">
+                    <img class="inline" src="../images/logo.png" width="50">
+                    NoGymFit
+                </span>
+                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                    <i class="fa-solid fa-bars" onclick="menu(this)"></i>
+                </span>
             </div>
-            <div class="links-container">
-                <a href="#">Home</a>
-                <a href="#">Train</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </div>
+            <ul id="links-container" class="md:flex md:items-center md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top[-400px] transition-all ease-in text-center md:text-left font-black text-[1.2em]">
+                <li class="mx-4 my-6 md:my-0 hover:text-orange-600 px-4 opacity-70">
+                    <a href="#">Home</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0 hover:text-orange-600 px-4 opacity-70">
+                    <a href="../workout-page/workout-page.html">Train</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0 hover:text-orange-600 px-4 opacity-70">
+                    <a href="#">Contact</a>
+                </li>
+                <a class="text-base bg-orange-50 hover:bg-orange-300 border-solid border-2 rounded-lg border-orange-600 px-7 py-2 capitalize font-poppins text-orange-700 font-black duration-500" href="#">join now</a>
+            </ul>
         </header>
 
 
