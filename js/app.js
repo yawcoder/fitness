@@ -9,13 +9,13 @@ const pageEl = document.getElementById('pagination');
 
 let bodyWeightExercisesArr = []; //Initial array for body weight exercises only
 let currentPage = 1; //Initial page after search results appear
-let rows = 12; // Number of rows per page
+let rows = 30; // Number of rows per page
 
 
 fetch("https://exercisedb.p.rapidapi.com/exercises/bodyPartList", {
     'method': "GET",
     'headers': {
-        'X-RapidAPI-Key': 'a7233decdemsh23745ac63a7397bp14c4f5jsne53017012bcc',
+        'X-RapidAPI-Key': '7b2843c6ccmshbe16a05f1f0eda4p1d7dd0jsn2c77e6ae67e2',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     } // Fetching data of list of body parts from API with API keys
 
@@ -29,7 +29,7 @@ fetch("https://exercisedb.p.rapidapi.com/exercises/bodyPartList", {
 fetch("https://exercisedb.p.rapidapi.com/exercises", {
     'method': "GET",
     'headers': {
-        'X-RapidAPI-Key': 'a7233decdemsh23745ac63a7397bp14c4f5jsne53017012bcc',
+        'X-RapidAPI-Key': '7b2843c6ccmshbe16a05f1f0eda4p1d7dd0jsn2c77e6ae67e2',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     } // fetching data of list of exercises from API with API keys
 
@@ -76,9 +76,6 @@ function displayList (items, wrapper, rowsPerPage, page){
         itemEl.classList.add('text-center');
         itemEl.classList.add('w-3/5');
         itemEl.classList.add('mx-auto');
-        itemEl.classList.add('border-solid');
-        itemEl.classList.add('border-2');
-        itemEl.classList.add('border-black');
 
         itemEl.innerHTML =
         `<p>
@@ -105,6 +102,18 @@ function setupPagination(items, wrapper, rowsPerPage){
 
 function paginationBtn(page, items){
     let btn = document.createElement('button');
+    btn.classList.add('mx-1');
+    btn.classList.add('border-2');
+    btn.classList.add('border-solid');
+    btn.classList.add('border-orange-600');
+    btn.classList.add('bg-orange-100');
+    btn.classList.add('text-orange-600');
+    btn.classList.add('px-2');
+    btn.classList.add('cursor-pointer');
+    btn.classList.add('font-black');
+    btn.classList.add('rounded-lg');
+    btn.classList.add('my-1');
+
     btn.innerText = page;
 
     if(currentPage == page){
@@ -115,7 +124,7 @@ function paginationBtn(page, items){
         currentPage = page;
         displayList(items, searchResults, rows, currentPage);
 
-        let currentBtn = document.querySelector('.pagenumbers button.active');
+        let currentBtn = document.querySelector('#pagination button.active');
         currentBtn.classList.remove('active');
         btn.classList.add('active');
 
