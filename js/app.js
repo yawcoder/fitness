@@ -9,13 +9,13 @@ const pageEl = document.getElementById('pagination');
 
 let bodyWeightExercisesArr = []; //Initial array for body weight exercises only
 let currentPage = 1; //Initial page after search results appear
-let rows = 30; // Number of rows per page
+let rows = 12; // Number of rows per page
 
 
 fetch("https://exercisedb.p.rapidapi.com/exercises/bodyPartList", {
     'method': "GET",
     'headers': {
-        'X-RapidAPI-Key': '5ae70f18e2msh9711d2514b14edfp14d848jsn5571af2df747',
+        'X-RapidAPI-Key': 'a7233decdemsh23745ac63a7397bp14c4f5jsne53017012bcc',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     } // Fetching data of list of body parts from API with API keys
 
@@ -29,7 +29,7 @@ fetch("https://exercisedb.p.rapidapi.com/exercises/bodyPartList", {
 fetch("https://exercisedb.p.rapidapi.com/exercises", {
     'method': "GET",
     'headers': {
-        'X-RapidAPI-Key': '5ae70f18e2msh9711d2514b14edfp14d848jsn5571af2df747',
+        'X-RapidAPI-Key': 'a7233decdemsh23745ac63a7397bp14c4f5jsne53017012bcc',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     } // fetching data of list of exercises from API with API keys
 
@@ -72,12 +72,22 @@ function displayList (items, wrapper, rowsPerPage, page){
         let item = paginatedItems[i];
 
         let itemEl = document.createElement('div');
-        itemEl.classList.add('item');
-        itemEl.innerHTML = `<div class="card">
-        <div class="gif-container">
-            <img src=${item.gifUrl}>
-        </div>
-    </div>`;
+        itemEl.classList.add('my-10');
+        itemEl.classList.add('text-center');
+        itemEl.classList.add('w-3/5');
+        itemEl.classList.add('mx-auto');
+        itemEl.classList.add('border-solid');
+        itemEl.classList.add('border-2');
+        itemEl.classList.add('border-black');
+
+        itemEl.innerHTML =
+        `<p>
+            ${item.name}
+        </p>
+        <img src=${item.gifUrl} class="w-1/5">
+        <p>
+            Target Muscle: ${item.target}
+        </p>`;
 
         wrapper.appendChild(itemEl);
     }
