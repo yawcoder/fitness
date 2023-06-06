@@ -114,7 +114,6 @@ function paginationBtn(page, items){
     btn.classList.add('rounded-lg');
     btn.classList.add('my-1');
     btn.classList.add('hover:bg-orange-600');
-    btn.classList.add('hover:text-2xl');
 
     btn.innerText = page;
 
