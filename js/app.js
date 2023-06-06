@@ -15,7 +15,7 @@ let rows = 30; // Number of rows per page
 fetch("https://exercisedb.p.rapidapi.com/exercises/bodyPartList", {
     'method': "GET",
     'headers': {
-        'X-RapidAPI-Key': '7b2843c6ccmshbe16a05f1f0eda4p1d7dd0jsn2c77e6ae67e2',
+        'X-RapidAPI-Key': '33bcc182a1mshce0fb87f6ee0427p1282b1jsnd36b11e0f70a',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     } // Fetching data of list of body parts from API with API keys
 
@@ -29,7 +29,7 @@ fetch("https://exercisedb.p.rapidapi.com/exercises/bodyPartList", {
 fetch("https://exercisedb.p.rapidapi.com/exercises", {
     'method': "GET",
     'headers': {
-        'X-RapidAPI-Key': '7b2843c6ccmshbe16a05f1f0eda4p1d7dd0jsn2c77e6ae67e2',
+        'X-RapidAPI-Key': '33bcc182a1mshce0fb87f6ee0427p1282b1jsnd36b11e0f70a',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     } // fetching data of list of exercises from API with API keys
 
@@ -113,8 +113,11 @@ function paginationBtn(page, items){
     btn.classList.add('font-black');
     btn.classList.add('rounded-lg');
     btn.classList.add('my-1');
+    btn.classList.add('hover:bg-orange-600');
+    btn.classList.add('hover:text-2xl');
 
     btn.innerText = page;
+
 
     if(currentPage == page){
         btn.classList.add('active');
