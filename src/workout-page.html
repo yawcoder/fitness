@@ -35,21 +35,21 @@
         </header>
 
 
-        <div class="heading-container">
+        <div class="container mx-auto">
             <h2>What Would You Like To Train Today</h2>
         </div>
-        <div class="search-container">
+        <div id="search-container">
             <label for="body-part">Body Part:</label>
             <select id="body-part"></select>
             <button id="train-btn">Train</button>
         </div>
 
-        <div class="results-container">
-            <div id="pagination" class="w-4/5 mx-auto text-center"></div>
-            <div id="search-results" class="search-results"></div>
+        <div id="results-container" class="container mx-auto">
+            <div id="pagination" class="w-4/5 mx-auto text-center scale-90"></div>
+            <div id="search-results" class="md:flex md:flex-wrap w-full mx-auto justify-center"></div>
         </div>
     </div>
-    <script src="../js/navmobile.js"></script>
-    <script src="../js/app.js"></script>
+    <script src="./navmobile.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>

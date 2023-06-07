@@ -49,7 +49,7 @@ fetch("https://exercisedb.p.rapidapi.com/exercises", {
                 filteredExercisesArr.push(e);
             }
         })
-        console.log(filteredExercisesArr);
+        // console.log(filteredExercisesArr);
         displayList(filteredExercisesArr, searchResults, rows, currentPage);
         setupPagination(filteredExercisesArr, pageEl, rows);
     })
@@ -72,17 +72,18 @@ function displayList (items, wrapper, rowsPerPage, page){
         let item = paginatedItems[i];
 
         let itemEl = document.createElement('div');
-        itemEl.classList.add('my-10');
-        itemEl.classList.add('text-center');
+        itemEl.classList.add('my-14');
         itemEl.classList.add('w-3/5');
         itemEl.classList.add('mx-auto');
+        itemEl.classList.add('md:w-1/4');
+        itemEl.classList.add('md:mx-5');
 
         itemEl.innerHTML =
-        `<p>
+        `<img src=${item.gifUrl} class="w-full border-[1px] border-solid border-orange-200 shadow-2xl rounded-3xl">
+        <p class="my-2 font-black font-poppins text-[1.2rem] ml-3">
             ${item.name}
         </p>
-        <img src=${item.gifUrl} class="w-1/5">
-        <p>
+        <p class="ml-3">
             Target Muscle: ${item.target}
         </p>`;
 
@@ -114,6 +115,11 @@ function paginationBtn(page, items){
     btn.classList.add('rounded-lg');
     btn.classList.add('my-1');
     btn.classList.add('hover:bg-orange-600');
+    btn.classList.add('hover:text-white');
+    btn.classList.add('outline-none');
+    btn.classList.add('duration-300');
+    btn.classList.add('active:scale-75');
+
 
     btn.innerText = page;
 
@@ -130,7 +136,24 @@ function paginationBtn(page, items){
         currentBtn.classList.remove('active');
         btn.classList.add('active');
 
+        const allBtns = document.querySelectorAll('#pagination button');
+
+        for(let i=0; i<allBtns.length; i++){
+            if(allBtns[i].classList.contains('active')){
+                allBtns[i].classList.remove('bg-orange-100');
+                allBtns[i].classList.add('bg-orange-600');
+                allBtns[i].classList.remove('text-orange-600');
+                allBtns[i].classList.add('text-white');
+            }else{
+                allBtns[i].classList.add('bg-orange-100');
+                allBtns[i].classList.remove('bg-orange-600');
+                allBtns[i].classList.add('text-orange-600');
+                allBtns[i].classList.remove('text-white');
+            }
+        }
+
     })
+
 
     return btn;
 }
