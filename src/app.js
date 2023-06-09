@@ -15,21 +15,21 @@ let rows = 30; // Number of rows per page
 fetch("https://exercisedb.p.rapidapi.com/exercises/bodyPartList", {
     'method': "GET",
     'headers': {
-        'X-RapidAPI-Key': '33bcc182a1mshce0fb87f6ee0427p1282b1jsnd36b11e0f70a',
+        'X-RapidAPI-Key': '6cb00710d0mshb966d50c12ad8e3p1c9ee3jsn2c5acc9223ff',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     } // Fetching data of list of body parts from API with API keys
 
     
 }).then(response => response.json()).then(allBodyParts => { //API responds with data of list of body Parts and placed in JSON format (array)
         for(let i=0; i<allBodyParts.length; i++){ //looping through array of body part list
-            bodyPartSelect.innerHTML += `<option>${allBodyParts[i]}</option>`; // each body part is appended to the <select> tag option list
+            bodyPartSelect.innerHTML += `<option class="capitalize font-black">${allBodyParts[i]}</option>`; // each body part is appended to the <select> tag option list
         }
 })
 
 fetch("https://exercisedb.p.rapidapi.com/exercises", {
     'method': "GET",
     'headers': {
-        'X-RapidAPI-Key': '33bcc182a1mshce0fb87f6ee0427p1282b1jsnd36b11e0f70a',
+        'X-RapidAPI-Key': '6cb00710d0mshb966d50c12ad8e3p1c9ee3jsn2c5acc9223ff',
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     } // fetching data of list of exercises from API with API keys
 
